@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+    <TabHost
+        android:id="@+id/tab_host"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@android:id/tabs"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <FrameLayout
+                    android:id="@+id/tab_store"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ViewFlipper
+                        android:id="@+id/viewFlipper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/tab_end"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ListView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listView" />
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:divider="@null" />
+        </RelativeLayout>
+    </TabHost>
+
+</RelativeLayout>
